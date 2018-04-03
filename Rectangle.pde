@@ -18,7 +18,7 @@ class Rectangle
     this.x = x;
     this.y = 500; 
     this.h = h;  
-    this.w = 50;
+    this.w = 30;
   }
   
   int compare(Rectangle other)
@@ -29,9 +29,13 @@ class Rectangle
   }
   void show()
   {
-    fill(20, 50, 10, 100); 
+    fill(this.c); 
     stroke(0); 
     strokeWeight(2); 
-    rect(this.x, this.y, this.w, this.h);     
+    rect(this.x, this.y, this.w, this.h); 
+    textSize(20);
+    fill(0, 102, 153); 
+    text(""+-1*this.h, this.x+10, this.y + this.h - 20); 
+    
   }
 }
