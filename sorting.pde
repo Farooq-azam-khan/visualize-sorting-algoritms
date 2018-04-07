@@ -1,7 +1,9 @@
 Rectangle[] rectangles;  
-Rectangle[] sorted_rs;  
+Rectangle[] sorted_rs;
 int num_of_recs; 
-int mouse_used; 
+int mouse_used;
+boolean sorted = false;
+int rate = 500;
 
 void setup()
 {
@@ -17,7 +19,10 @@ void setup()
 void draw()
 {
   background(255); 
-  
+  if (!sorted){
+    mousePressed();
+    delay(rate);
+  }
   
   // show each rect
   sorted_rs = new Rectangle[rectangles.length]; 
